@@ -10,14 +10,13 @@
 %\input{aglossary.tex}
 %\makeglossaries
 
-\title{Guidelines for Rubin Independent Data Access Centers}
+\title[Independent DACs]{Guidelines for Rubin Independent Data Access Centers}
 
 % Optional subtitle
 % \setDocSubtitle{A subtitle}
 
-\author{%
-Leanne Guy
-}
+\author   {William O'Mullane, Beth Willman, Melissa Graham, Leanne Guy, Robert Blum }
+
 
 \setDocRef{RTN-003}
 \setDocUpstreamLocation{\url{https://github.com/rubin-observatory/rtn-003}}
@@ -28,7 +27,7 @@ Leanne Guy
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-This document provides guidelines for groups that are independent from the LSST Project and Operations (i.e. LSST Data Facility) and would like to stand up an independent Data Access Center (IDAC; existing data centers that could serve LSST data products are considered IDACs for purposes of this document). Some IDACs may want to serve only a subset of the LSST data products: this document proposes three portion sizes, from full releases to a “light” catalog without posteriors. Guidelines and requirements for IDACs in terms of data storage, computational resources, dedicated personnel, and user authentication are described, as well as a preliminary assessment of the cost impacts. Some institutions, even those inside the US and Chile, may serve LSST data products locally to their research community. Requirements and responsibilities for such institutional bulk data transfers are also described here. The purpose of this draft document is to serve as a preliminary resource for partner institutions wishing to assess the feasibility of hosting an IDAC.
+This document provides guidelines for groups that are independent from the LSST Project and Operations (i.e. LSST Data Facility) and would like to stand up an independent Data Access Center (IDAC; existing data centers that could serve LSST data products are considered IDACs for purposes of this document). Some IDACs may want to serve only a subset of the LSST data products: this document proposes three portion sizes, from full releases to a "light" catalog without posteriors. Guidelines and requirements for IDACs in terms of data storage, computational resources, dedicated personnel, and user authentication are described, as well as a preliminary assessment of the cost impacts. Some institutions, even those inside the US and Chile, may serve LSST data products locally to their research community. Requirements and responsibilities for such institutional bulk data transfers are also described here. \textbf{The purpose of this draft document is to serve as a \textit{preliminary} resource for partner institutions wishing to assess the feasibility of hosting an IDAC.}
 }
 
 % Change history defined here.
@@ -36,7 +35,7 @@ This document provides guidelines for groups that are independent from the LSST 
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{Leanne Guy}
+  \addtohist{1}{2020-06-22}{Migrated document from LPM-251}{Leanne Guy}
 }
 
 
@@ -47,8 +46,19 @@ This document provides guidelines for groups that are independent from the LSST 
 % Frequently for a technote we do not want a title page  uncomment this to remove the title page and changelog.
 % use \mkshorttitle to remove the extra pages
 
+\renewcommand{\thepage}{\arabic{page}}% Arabic numerals for page counter
+
+\setcounter{page}{1}% Start page number
+
 % ADD CONTENT HERE
 % You can also use the \input command to include several content files.
+
+\input{intro}
+%\input{public}
+\input{dataproducts}
+\input{requirements}
+\input{cost}
+
 
 \appendix
 % Include all the relevant bib files.
@@ -64,7 +74,5 @@ This document provides guidelines for groups that are independent from the LSST 
 %\printglossaries
 
 
-
-
-
+\input{checklist}
 \end{document}
