@@ -1,6 +1,8 @@
 \section{Requirements and Guidelines for IDACs}\label{sec:reqs}
 Since creating, delivering, and supporting the implementation of \RO data products via IDACs creates some cost to the \RO Project, IDACs will be expected to follow some basic requirements and guidelines, which are described below.
 The actual costs of \gls{IDAC} support and infrastructure development are considered separately in Section \ref{sec:xfercost}.
+We should also consider that there is the possibility of a {\it lite} DAC or a {\it full} DAC.
+
 
 \subsection{\RO site topology} \label{sec:topology}
 
@@ -9,14 +11,18 @@ Figure \ref{fig:idac-topology} shows a  topology for a set of interconnected IDA
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.95\textwidth]{images/idac-topology}
-\caption{US Data Facility and Independent \gls{DAC} network topology.  \label{fig:idac-topology}}
+\caption{US Data Facility and \gls{IDAC} network topology.  \label{fig:idac-topology}}
 \end{center}
 \end{figure}
+
+\subsection{Authentication and Access}\label{sec:auth}
+Any DAC will have to support authentication according to \RO access rules. This may imply interfacing with the \RO LDAP. In addition any user with access rights should be allowed access tot he IDAC.
 
 \subsection{Required Resources} \label{sec:resources}
 Institutions or organizations wishing to set up independent data access centres will be expected to have
 sufficient resources and commitments before we discuss data transfers and support.
 See also \secref{sec:cvs} for a discussion on compute vs storage.
+The exact commitment of course depends on the level of IDAC being implemented.
 
 \subsubsection{Data Storage}
 Any institution considering setting up an \gls{IDAC} will need to show commitment on purchasing sufficient storage and \gls{CPU} power to hold and serve the data. Sufficient storage ranges from $0.5$ exabytes for the full data release(s) down to $100$ terabytes for a catalog server, and potentially further down to $70$ terabytes if the {\tt Object Lite} option is offered. For the full catalog , of order 100 nodes are required to serve it up. To serve images, a \gls{DAC} would need some additional servers; depending on load this may be order 10 additional nodes.
@@ -53,13 +59,9 @@ The \gls{LDF} will prepare data products for distribution to IDACs along with do
 
 LSST, through the USDF will establish a process for potential \gls{IDAC} groups to interface with and establish data transfers to their IDACs. It is expected that \gls{IDAC} groups will propose to \gls{LSST} what their \gls{IDAC} would support and then \gls{LSST} will work with them to establish requirements to receive \gls{LSST} data. One approved, \gls{LSST} will provide (modest) technical support consistent with available resources to assist groups setting up their IDACs provided they comply with prerequisites discussed in this document and especially in \secref{sec:resources}.
 
-\subsection{Proprietary Data Access Policies}
-{\color{red}Defer for now until further guidance received.} \newline
-=======
-
 \subsection{Data Distribution} \label{sec:dist}
 
-NCSA will have $100Gb/s$ connections  on \gls{ESNet} which has interconnects with Internet2 - this should provide a distribution mechanism for getting data to IDACs, it will however be limited by the fact that much of our bandwidth is already allocated for data transmission to \gls{IN2P3} and alert distribution.
+USDF will have $100Gb/s$ connections  on \gls{ESNet} which has interconnects with Internet2 - this should provide a distribution mechanism for getting data to IDACs, it will however be limited by the fact that much of our bandwidth is already allocated for data transmission to \gls{IN2P3} and alert distribution.
 
 A tiered model as used by \gls{CERN} for high energy physics would seem a desirable way to achieve big transfers. Hence we would have a small selection of tier 2 centres with all data products from which tier 3 centres could copy the subsets they wish to work with.  Other alternatives are discuss in \secref{sec:xfer}.
 
