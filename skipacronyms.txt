@@ -10,3 +10,9 @@ http
 p
 s
 A
+USA
+GIT
+IOA
+WOM
+M31
+OBJECT
