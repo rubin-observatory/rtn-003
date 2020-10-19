@@ -5,3 +5,6 @@
 [submodule "images"]
 	path = images
 	url = https://github.com/lsst-dm/images.git
+[submodule "dmtn-135"]
+	path = dmtn-135
+	url = git@github.com:lsst-dm/dmtn-135

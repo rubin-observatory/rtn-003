@@ -12,6 +12,9 @@ RTN-003
 
 This document provides guidelines for groups that are independent from the LSST Project and Operations (i.e. LSST Data Facility) and would like to stand up an independent Data Access Center (IDAC; existing data centers that could serve LSST data products are considered IDACs for purposes of this document). Some IDACs may want to serve only a subset of the LSST data products: this document proposes three portion sizes, from full releases to a “light” catalog without posteriors. Guidelines and requirements for IDACs in terms of data storage, computational resources, dedicated personnel, and user authentication are described, as well as a preliminary assessment of the cost impacts. Some institutions, even those inside the US and Chile, may serve LSST data products locally to their research community. Requirements and responsibilities for such institutional bulk data transfers are also described here. The purpose of this draft document is to serve as a preliminary resource for partner institutions wishing to assess the feasibility of hosting an IDAC.
 
+
+Note that some tables from DMTN-135 are duplicated here - DMTN-135 was added as a submodeule to facilitate that. 
+
 Links
 =====
 
