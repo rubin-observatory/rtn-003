@@ -29,6 +29,8 @@ acronyms.tex: $(tex) myacronyms.txt
 aglossary.tex :$(tex) myglossarydefs.csv
 	generateAcronyms.py  -g $(tex)
 
+summary.tex:
+	makeSummary.sh
 
 .PHONY: clean
 clean:
