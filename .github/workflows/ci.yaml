@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0 # full history for metadata
+          fetch-depth: 1 # full history for metadata
           submodules: true
 
       - name: Set up Python
