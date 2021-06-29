@@ -16,7 +16,9 @@ Figure \ref{fig:idac-topology} shows a  topology for a set of interconnected IDA
 \end{figure}
 
 \subsection{Authentication and Access}\label{sec:auth}
-Any DAC will have to support authentication according to \RO access rules. This may imply delegating access control to a \RO authorization service. In addition any user with access rights should be allowed access tot he IDAC.
+Any DAC will have to support authentication according to \RO access rules. This may imply delegating access control to a \RO authorization service. In addition any user with access rights should be allowed access to the IDAC.
+
+We should be clear that on the construction side we have not necessarily planned to Authenticate users at various IDACs so there may be some development work needed to make an Auth service available.
 
 \subsection{Required Resources} \label{sec:resources}
 Institutions or organizations wishing to set up independent data access centres will be expected to have
@@ -65,5 +67,7 @@ USDF will have $100Gb/s$ connections  on \gls{ESNet} which has interconnects wit
 A tiered model as used by \gls{CERN} for high energy physics would seem a desirable way to achieve big transfers. Hence we would have a small selection of tier 2 centres with all data products from which tier 3 centres could copy the subsets they wish to work with.  Other alternatives are discuss in \secref{sec:xfer}.
 
 In \gls{HEP} experiments such as  BaBar various physics analysis groups (science collaborations in \gls{LSST} ) were assigned to specific international centers as their primary computing and analysis facility, thereby distributing the computing load around the "network." Users naturally tend to use the facility with available resources and cycles.
+
+As of 2021 the baseline for large transfers looks like Rucio\footnote{\url{https://rucio.cern.ch/}}.
 
 
